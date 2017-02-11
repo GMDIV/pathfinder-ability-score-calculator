@@ -1,0 +1,33 @@
+{
+  "name": "pathfinder-ability-score-calculator",
+  "version": "1.0.0",
+  "description": "Pathfinder ability score calculator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GMDIV/pathfinder-ability-score-calculator.git"
+  },
+  "author": "GMDIV",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GMDIV/pathfinder-ability-score-calculator/issues"
+  },
+  "homepage": "https://github.com/GMDIV/pathfinder-ability-score-calculator#readme",
+  "dependencies": {
+    "babel": "^6.5.2",
+    "babel-cli": "^6.22.2",
+    "babel-core": "^6.22.1",
+    "babel-loader": "^6.2.10",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-react": "^6.22.0",
+    "babel-watch": "^2.0.6",
+    "express": "^4.14.1",
+    "npm-run-all": "^4.0.1",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "webpack": "^2.2.1"
+  }
+}
