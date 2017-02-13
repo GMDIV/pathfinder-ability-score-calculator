@@ -1,4 +1,5 @@
 import React from 'react';
+import AbilityScores from './AbilityScores.jsx';
 
 export default class App extends React.Component {
 	constructor(props) {
@@ -13,7 +14,7 @@ export default class App extends React.Component {
 	render(){
 		return (
 			<div>
-				<h1>Rendering from App.jsx</h1>
+				<AbilityScores />
 			</div>
 		)
 	}
