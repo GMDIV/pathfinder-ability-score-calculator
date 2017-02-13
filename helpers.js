@@ -11,5 +11,385 @@ module.exports = {
 	},
 	calculateRacialModifiers: function(){
 
+	},
+	racialModifierList: {
+	
+		human: {
+			name: "Human",
+			modifiers: {
+				plusTwoToAny: true,
+				strength: 0,
+				dexterity: 0,
+				constitution: 0,
+				intelligence: 0,
+				wisdom: 0,
+				charisma: 0
+			},
+			pfsLegal: true,
+			coreRace: true,
+			thirdParty: false
+		},			
+		elf: {
+			name: "Elf",
+			modifiers: {
+				plusTwoToAny: false,
+				strength: 0,
+				dexterity: 2,
+				constitution: -2,
+				intelligence: 2,
+				wisdom: 0,
+				charisma: 0
+			},
+			pfsLegal: true,
+			coreRace: true,
+			thirdParty: false
+		},
+		gnome: {
+			name: "Gnome",
+			modifiers: {
+				plusTwoToAny: false,
+				strength: -2,
+				dexterity: 0,
+				constitution: 2,
+				intelligence: 0,
+				wisdom: 0,
+				charisma: 2
+			},
+			pfsLegal: true,
+			coreRace: true,
+			thirdParty: false
+		},
+		halfElf: {
+			name: "Half-Elf",
+			modifiers: {
+				plusTwoToAny: true,
+				strength: 0,
+				dexterity: 0,
+				constitution: 0,
+				intelligence: 0,
+				wisdom: 0,
+				charisma: 0
+			},
+			pfsLegal: true,
+			coreRace: true,
+			thirdParty: false
+		},
+		halfling: {
+			name: "Halfling",
+			modifiers: {
+				plusTwoToAny: false,
+				strength: -2,
+				dexterity: 2,
+				constitution: 0,
+				intelligence: 0,
+				wisdom: 0,
+				charisma: 2
+			},
+			pfsLegal: true,
+			coreRace: true,
+			thirdParty: false
+		},
+		halfOrc: {
+			name: "Half-Orc",
+			modifiers: {
+				plusTwoToAny: true,
+				strength: 0,
+				dexterity: 0,
+				constitution: 0,
+				intelligence: 0,
+				wisdom: 0,
+				charisma: 0
+			},
+			pfsLegal: true,
+			coreRace: true,
+			thirdParty: false
+		},
+		dwarf: {
+			name: "Dwarf",
+			modifiers: {
+				plusTwoToAny: false,
+				strength: 0,
+				dexterity: 0,
+				constitution: 2,
+				intelligence: 0,
+				wisdom: 2,
+				charisma: -2
+			},
+			pfsLegal: true,
+			coreRace: true,
+			thirdParty: false
+		},
+		aasimar: {
+			name: "Aasimar",
+			modifiers: {
+				plusTwoToAny: false,
+				strength: 0,
+				dexterity: 0,
+				constitution: 0,
+				intelligence: 0,
+				wisdom: 2,
+				charisma: 2
+			},
+			pfsLegal: false,
+			coreRace: false,
+			thirdParty: false
+		},
+		catfolk: {
+			name: "Catfolk",
+			modifiers: {
+				plusTwoToAny: false,
+				strength: 0,
+				dexterity: 2,
+				constitution: 0,
+				intelligence: 0,
+				wisdom: -2,
+				charisma: 2
+			},
+			pfsLegal: false,
+			coreRace: false,
+			thirdParty: false
+		},
+		dhampir: {
+			name: "Dhampir",
+			modifiers: {
+				plusTwoToAny: false,
+				strength: 0,
+				dexterity: 2,
+				constitution: -2,
+				intelligence: 0,
+				wisdom: 0,
+				charisma: 2
+			},
+			pfsLegal: false,
+			coreRace: false,
+			thirdParty: false
+		},
+		drow: {
+			name: "Drow",
+			modifiers: {
+				plusTwoToAny: false,
+				strength: 0,
+				dexterity: 2,
+				constitution: -2,
+				intelligence: 0,
+				wisdom: 0,
+				charisma: 2
+			},
+			pfsLegal: false,
+			coreRace: false,
+			thirdParty: false
+		},
+		fetchling: {
+			name: "Fetchling",
+			modifiers: {
+				plusTwoToAny: false,
+				strength: 0,
+				dexterity: 2,
+				constitution: 0,
+				intelligence: 0,
+				wisdom: -2,
+				charisma: 2
+			},
+			pfsLegal: false,
+			coreRace: false,
+			thirdParty: false
+		},
+		goblin: {
+			name: "Goblin",
+			modifiers: {
+				plusTwoToAny: false,
+				strength: -2,
+				dexterity: 4,
+				constitution: 0,
+				intelligence: 0,
+				wisdom: 0,
+				charisma: -2
+			},
+			pfsLegal: false,
+			coreRace: false,
+			thirdParty: false
+		},
+		human: {
+			name: "Human",
+			modifiers: {
+				plusTwoToAny: false,
+				strength: 0,
+				dexterity: 0,
+				constitution: 0,
+				intelligence: 0,
+				wisdom: 0,
+				charisma: 0
+			},
+			pfsLegal: true,
+			coreRace: false,
+			thirdParty: false
+		},
+		human: {
+			name: "Human",
+			modifiers: {
+				plusTwoToAny: false,
+				strength: 0,
+				dexterity: 0,
+				constitution: 0,
+				intelligence: 0,
+				wisdom: 0,
+				charisma: 0
+			},
+			pfsLegal: true,
+			coreRace: false,
+			thirdParty: false
+		},
+		human: {
+			name: "Human",
+			modifiers: {
+				plusTwoToAny: false,
+				strength: 0,
+				dexterity: 0,
+				constitution: 0,
+				intelligence: 0,
+				wisdom: 0,
+				charisma: 0
+			},
+			pfsLegal: true,
+			coreRace: false,
+			thirdParty: false
+		},
+		human: {
+			name: "Human",
+			modifiers: {
+				plusTwoToAny: false,
+				strength: 0,
+				dexterity: 0,
+				constitution: 0,
+				intelligence: 0,
+				wisdom: 0,
+				charisma: 0
+			},
+			pfsLegal: true,
+			coreRace: false,
+			thirdParty: false
+		},
+		human: {
+			name: "Human",
+			modifiers: {
+				plusTwoToAny: false,
+				strength: 0,
+				dexterity: 0,
+				constitution: 0,
+				intelligence: 0,
+				wisdom: 0,
+				charisma: 0
+			},
+			pfsLegal: true,
+			coreRace: false,
+			thirdParty: false
+		},
+		human: {
+			name: "Human",
+			modifiers: {
+				plusTwoToAny: false,
+				strength: 0,
+				dexterity: 0,
+				constitution: 0,
+				intelligence: 0,
+				wisdom: 0,
+				charisma: 0
+			},
+			pfsLegal: true,
+			coreRace: false,
+			thirdParty: false
+		},
+		human: {
+			name: "Human",
+			modifiers: {
+				plusTwoToAny: false,
+				strength: 0,
+				dexterity: 0,
+				constitution: 0,
+				intelligence: 0,
+				wisdom: 0,
+				charisma: 0
+			},
+			pfsLegal: true,
+			coreRace: false,
+			thirdParty: false
+		},
+		human: {
+			name: "Human",
+			modifiers: {
+				plusTwoToAny: false,
+				strength: 0,
+				dexterity: 0,
+				constitution: 0,
+				intelligence: 0,
+				wisdom: 0,
+				charisma: 0
+			},
+			pfsLegal: true,
+			coreRace: false,
+			thirdParty: false
+		},
+		human: {
+			name: "Human",
+			modifiers: {
+				plusTwoToAny: false,
+				strength: 0,
+				dexterity: 0,
+				constitution: 0,
+				intelligence: 0,
+				wisdom: 0,
+				charisma: 0
+			},
+			pfsLegal: true,
+			coreRace: false,
+			thirdParty: false
+		},
+		human: {
+			name: "Human",
+			modifiers: {
+				plusTwoToAny: false,
+				strength: 0,
+				dexterity: 0,
+				constitution: 0,
+				intelligence: 0,
+				wisdom: 0,
+				charisma: 0
+			},
+			pfsLegal: true,
+			coreRace: false,
+			thirdParty: false
+		},
+		human: {
+			name: "Human",
+			modifiers: {
+				plusTwoToAny: false,
+				strength: 0,
+				dexterity: 0,
+				constitution: 0,
+				intelligence: 0,
+				wisdom: 0,
+				charisma: 0
+			},
+			pfsLegal: true,
+			coreRace: false,
+			thirdParty: false
+		},
+		human: {
+			name: "Human",
+			modifiers: {
+				plusTwoToAny: false,
+				strength: 0,
+				dexterity: 0,
+				constitution: 0,
+				intelligence: 0,
+				wisdom: 0,
+				charisma: 0
+			},
+			pfsLegal: true,
+			coreRace: false,
+			thirdParty: false
+		},
+		
+
 	}
 }
