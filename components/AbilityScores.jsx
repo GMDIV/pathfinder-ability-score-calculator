@@ -18,6 +18,18 @@ export default class AbilityScores extends React.Component {
 			intelligenceTotal: 10,
 			wisdomTotal: 10,
 			charismaTotal: 10,
+			strengthRacial: 0,
+			dexterityRacial: 0,
+			constitutionRacial: 0,
+			intelligenceRacial: 0,
+			wisdomRacial: 0,
+			charismaRacial: 0,
+			strengthModifier: 0,
+			dexterityModifier: 0,
+			constitutionModifier: 0,
+			intelligenceModifier: 0,
+			wisdomModifier: 0,
+			charismaModifier: 0,
 			race: null
 		}		
 	}
@@ -32,44 +44,51 @@ export default class AbilityScores extends React.Component {
 					    <th>Purchased</th> 
 					    <th>Racial Mod</th>
 					    <th>Final Ability Score</th>
+					    <th>Bonus</th>
 					  </tr>
 				  	</thead>
 				  	<tbody>
 					  <tr>
-					    <td>Strength</td>
+					    <td title="Modifies melee attack, melee damage, and how much you can carry.">Strength</td>
 					    <td>{this.state.strength}</td> 
-					    <td>(0)</td>
+					    <td>{this.state.strengthRacial}</td>
 					    <td>{this.state.strengthTotal}</td>
+					    <td>{this.state.strengthModifier}</td>
 					  </tr>
 					  <tr>
-					    <td>Dexterity</td>
+					    <td title="Modifies ranged attack, dodge AC, CMD, and reflex saves.">Dexterity</td>
 					    <td>{this.state.dexterity}</td> 
-					    <td>(0)</td>
+					    <td>{this.state.dexterityRacial}</td>
 					    <td>{this.state.dexterityTotal}</td>
+					    <td>{this.state.dexterityModifier}</td>
 					  </tr>
 					  <tr>
-					    <td>Constitution</td>
+					    <td title="Modifies fortitude saves and bonus health.">Constitution</td>
 					    <td>{this.state.constitution}</td> 
-					    <td>(0)</td>
+					    <td>{this.state.constitutionRacial}</td>
 					    <td>{this.state.constitutionTotal}</td>
+					    <td>{this.state.constitutionModifier}</td>
 					  </tr>
 					  <tr>
-					    <td>Intelligence</td>
+					    <td title="Increases skill points per level.">Intelligence</td>
 					    <td>{this.state.intelligence}</td> 
-					    <td>(0)</td>
+					    <td>{this.state.intelligenceRacial}</td>
 					    <td>{this.state.intelligenceTotal}</td>
+					    <td>{this.state.intelligenceModifier}</td>
 					  </tr>
 					  <tr>
-					    <td>Wisdom</td>
+					    <td title="Modifies will saves.">Wisdom</td>
 					    <td>{this.state.wisdom}</td> 
-					    <td>(0)</td>
+					    <td>{this.state.wisdomRacial}</td>
 					    <td>{this.state.wisdomTotal}</td>
+					    <td>{this.state.wisdomModifier}</td>
 					  </tr>
 					  <tr>
-					    <td>Charisma</td>
+					    <td title="Modifies social skills.">Charisma</td>
 					    <td>{this.state.charisma}</td> 
-					    <td>(0)</td>
+					    <td>{this.state.charismaRacial}</td>
 					    <td>{this.state.charismaTotal}</td>
+					    <td>{this.state.charismaModifier}</td>
 					  </tr>
 					</tbody>
 				</table>
