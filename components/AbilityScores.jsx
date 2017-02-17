@@ -1,4 +1,5 @@
 import React from 'react';
+import AbilityScoreAdjuster from './AbilityScoreAdjuster.jsx';
 
 export default class AbilityScores extends React.Component {
 
@@ -50,7 +51,7 @@ export default class AbilityScores extends React.Component {
 				  	<tbody>
 					  <tr>
 					    <td title="Modifies melee attack, melee damage, and how much you can carry.">Strength</td>
-					    <td>{this.state.strength}</td> 
+					    <td><AbilityScoreAdjuster score={this.state.strength} /></td> 
 					    <td>{this.state.strengthRacial}</td>
 					    <td>{this.state.strengthTotal}</td>
 					    <td>{this.state.strengthModifier}</td>
