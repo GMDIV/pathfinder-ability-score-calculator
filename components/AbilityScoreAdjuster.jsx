@@ -8,7 +8,9 @@ export default class AbilityScoreAdjuster extends React.Component {
         console.log("heyyyy!");
         this.state = {
             score: this.props.score,
-            total: 0
+            total: 0,
+            attribute: this.props.attribute,
+            handleChange: this.props.handleChange
         };
         console.log("post state declaration",this.state.score)
         console.log("this.props.score", this.props.score)
@@ -20,8 +22,11 @@ export default class AbilityScoreAdjuster extends React.Component {
         console.log("increase complete!")
     }
     decreaseScore() {
-        var newScore = this.state.score > 0 ? this.state.score - 1 : 0;
-        this.setState({score: newScore});
+        if(this.state.score > 7){
+            var newScore = this.state.score > 0 ? this.state.score - 1 : 0;
+            this.setState({score: newScore});
+            this.state.handleChange(this.state.attribute, newScore);
+        }
     }
 
 
