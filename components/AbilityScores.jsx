@@ -2,6 +2,7 @@ import React from 'react';
 import AbilityScoreAdjuster from './AbilityScoreAdjuster.jsx';
 import raceData from '../raceData.js';
 import RaceList from './RaceList.jsx';
+import App from './App.jsx';
 
 export default class AbilityScores extends React.Component {
 
@@ -75,7 +76,6 @@ export default class AbilityScores extends React.Component {
 		console.log("this.state.allRaces ", this.state.allRaces)
 		return (
 			<div>
-				<RaceList raceData={this.state.allRaces} />
 				<table>
 					<thead>
 					  <tr>
