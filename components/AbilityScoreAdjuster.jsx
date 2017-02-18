@@ -18,7 +18,9 @@ export default class AbilityScoreAdjuster extends React.Component {
 
     increaseScore() {
         console.log("increase intitiated...")
-        this.setState({score: this.state.score + 1});
+        var newScore = this.state.score + 1;
+        this.setState({score: newScore});
+        this.state.handleChange(this.state.attribute, newScore);
         console.log("increase complete!")
     }
     decreaseScore() {

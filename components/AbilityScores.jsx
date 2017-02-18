@@ -38,13 +38,23 @@ export default class AbilityScores extends React.Component {
 
 	handleAdjustment(attribute, newVal){
 		console.log("Changing: ", attribute);
-		this.setState({attribute: newVal});
+		var newObject = {};
+		newObject[attribute] = newVal;
+		console.log("newAttribute: ", newObject)
+		this.setState(newObject);
 		console.log("Changed: ", attribute);
 		console.log("this.state.attribute = ", newVal);
 		console.log(this.state.cats);
+		this.logAttribute(attribute);
+	}
+	logAttribute(attribute){
+
+		console.log("this.state."+attribute )
 	}
 
+	
 	render(){
+		console.log("this.state.strength isssss....", this.state.strength)
 		return (
 			<div>
 				<table>
@@ -60,42 +70,42 @@ export default class AbilityScores extends React.Component {
 				  	<tbody>
 					  <tr>
 					    <td title="Modifies melee attack, melee damage, and how much you can carry.">Strength</td>
-					    <td><AbilityScoreAdjuster handleChange={this.handleAdjustment} attribute="strength" score={this.state.strength} /></td> 
+					    <td><AbilityScoreAdjuster handleChange={this.handleAdjustment.bind(this)} attribute="strength" score={this.state.strength} /></td> 
 					    <td>{this.state.strengthRacial}</td>
 					    <td>{this.state.strengthTotal}</td>
 					    <td>{this.state.strengthModifier}</td>
 					  </tr>
 					  <tr>
 					    <td title="Modifies ranged attack, dodge AC, CMD, and reflex saves.">Dexterity</td>
-					    <td><AbilityScoreAdjuster score={this.state.dexterity} /></td> 
+					    <td><AbilityScoreAdjuster handleChange={this.handleAdjustment} attribute="dexterity" score={this.state.dexterity} /></td> 
 					    <td>{this.state.dexterityRacial}</td>
 					    <td>{this.state.dexterityTotal}</td>
 					    <td>{this.state.dexterityModifier}</td>
 					  </tr>
 					  <tr>
 					    <td title="Modifies fortitude saves and bonus health.">Constitution</td>
-					    <td><AbilityScoreAdjuster score={this.state.constitution} /></td> 
+					    <td><AbilityScoreAdjuster handleChange={this.handleAdjustment} attribute="constitution" score={this.state.constitution} /></td> 
 					    <td>{this.state.constitutionRacial}</td>
 					    <td>{this.state.constitutionTotal}</td>
 					    <td>{this.state.constitutionModifier}</td>
 					  </tr>
 					  <tr>
 					    <td title="Increases skill points per level and bonus languages.">Intelligence</td>
-					    <td><AbilityScoreAdjuster score={this.state.intelligence} /></td> 
+					    <td><AbilityScoreAdjuster handleChange={this.handleAdjustment} attribute="intelligence" score={this.state.intelligence} /></td> 
 					    <td>{this.state.intelligenceRacial}</td>
 					    <td>{this.state.intelligenceTotal}</td>
 					    <td>{this.state.intelligenceModifier}</td>
 					  </tr>
 					  <tr>
 					    <td title="Modifies will saves.">Wisdom</td>
-					    <td><AbilityScoreAdjuster score={this.state.wisdom} /></td> 
+					    <td><AbilityScoreAdjuster handleChange={this.handleAdjustment} attribute="wisdom" score={this.state.wisdom} /></td> 
 					    <td>{this.state.wisdomRacial}</td>
 					    <td>{this.state.wisdomTotal}</td>
 					    <td>{this.state.wisdomModifier}</td>
 					  </tr>
 					  <tr>
 					    <td title="Modifies social skills.">Charisma</td>
-					    <td><AbilityScoreAdjuster score={this.state.charisma} /></td> 
+					    <td><AbilityScoreAdjuster handleChange={this.handleAdjustment} attribute="charisma" score={this.state.charisma} /></td> 
 					    <td>{this.state.charismaRacial}</td>
 					    <td>{this.state.charismaTotal}</td>
 					    <td>{this.state.charismaModifier}</td>
