@@ -1,5 +1,7 @@
 import React from 'react';
 import AbilityScoreAdjuster from './AbilityScoreAdjuster.jsx';
+import raceData from '../raceData.js';
+import RaceList from './RaceList.jsx';
 
 export default class AbilityScores extends React.Component {
 
@@ -31,7 +33,8 @@ export default class AbilityScores extends React.Component {
 			intelligenceModifier: 0,
 			wisdomModifier: 0,
 			charismaModifier: 0,
-			race: null,
+			currentRace: null,
+			allRaces: raceData,
 			cats: "catsssss"
 		}		
 	}
@@ -47,10 +50,11 @@ export default class AbilityScores extends React.Component {
 		console.log(this.state.cats);
 		this.logAttribute(attribute);
 		this.updateModsAndBonuses(attribute);
+		this.logAttribute(attribute);
 	}
 
 	logAttribute(attribute){
-		console.log("this.state."+attribute, this.state[attribute] )
+		console.log("this.state."+attribute + " logAttribute", this.state[attribute] )
 	}
 
 	updateModsAndBonuses(attribute){
@@ -61,11 +65,17 @@ export default class AbilityScores extends React.Component {
 		bonus[stat] = value; //set the this.state.strengthModifier to equal the modifier bonus of strength
 		this.setState(bonus); //update the value in state.
 	}
+
+	grabRace(race){
+
+	}
 	
 	render(){
 		console.log("this.state.strength isssss....", this.state.strength)
+		console.log("this.state.allRaces ", this.state.allRaces)
 		return (
 			<div>
+				<RaceList raceData={this.state.allRaces} />
 				<table>
 					<thead>
 					  <tr>
