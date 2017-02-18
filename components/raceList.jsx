@@ -24,7 +24,7 @@ export default class RaceList extends React.Component {
 		console.log(raceContainer)//array of objects that contain the data for each race
 		return(
 			<div>
-				<select>
+				<select onChange={this.state.raceChange}>
 					{  
 					 	raceContainer.map(function(race){
 					 		console.log(race) //object containing the data of the particular race

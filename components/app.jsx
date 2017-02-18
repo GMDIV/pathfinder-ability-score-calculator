@@ -12,12 +12,15 @@ export default class App extends React.Component {
 			allRaces: RaceData
 		};
 	}
-	raceChange(){
+	raceChange(event){
+		this.setState({race: event.target.value})
 		//this.setState({race: })
 		console.log("yo race change time")
+		console.log("new race selected: ", this.state.race)
 	}
 	
 	render(){
+		console.log("App render - this.state.race is....: ", this.state.race)
 		return (
 			<div>
 				<RaceList raceChange={this.raceChange.bind(this)} raceData={this.state.allRaces} />
