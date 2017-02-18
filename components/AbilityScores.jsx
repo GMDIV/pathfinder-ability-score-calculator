@@ -46,12 +46,21 @@ export default class AbilityScores extends React.Component {
 		console.log("this.state.attribute = ", newVal);
 		console.log(this.state.cats);
 		this.logAttribute(attribute);
+		this.updateModsAndBonuses(attribute);
 	}
+
 	logAttribute(attribute){
-
-		console.log("this.state."+attribute )
+		console.log("this.state."+attribute, this.state[attribute] )
 	}
 
+	updateModsAndBonuses(attribute){
+		var bonus = {}; //create an object that will be used by setState
+		var stat = attribute + "Modifier"; //stat is a value that joins attributes like strength with Modifier for strengthModifier
+		var value = Math.round((this.state[attribute] - 10) / 2) //calculate the modifier bonus of the attribute
+		console.log("bonus modifier is ", value) 
+		bonus[stat] = value; //set the this.state.strengthModifier to equal the modifier bonus of strength
+		this.setState(bonus); //update the value in state.
+	}
 	
 	render(){
 		console.log("this.state.strength isssss....", this.state.strength)
