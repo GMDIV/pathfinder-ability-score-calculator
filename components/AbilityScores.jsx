@@ -34,11 +34,12 @@ export default class AbilityScores extends React.Component {
 			intelligenceModifier: 0,
 			wisdomModifier: 0,
 			charismaModifier: 0,
-			currentRace: null,
 			allRaces: raceData,
 			cats: "catsssss"
 		}		
 	}
+	//reminder - instead of using this.state.race, we use this.props.race so that it constantly flows from App.jsx.
+
 
 	handleAdjustment(attribute, newVal){
 		console.log("Changing: ", attribute);
@@ -67,13 +68,15 @@ export default class AbilityScores extends React.Component {
 		this.setState(bonus); //update the value in state.
 	}
 
-	grabRace(race){
-
+	updateRaceMod(){
+		console.log("updateRaceMod: --- ", raceData[this.props.race])
 	}
 	
 	render(){
 		console.log("this.state.strength isssss....", this.state.strength)
 		console.log("this.state.allRaces ", this.state.allRaces)
+		console.log("AbilityScores - this.state.currentRace isssss.....: ", this.props.race)
+		this.updateRaceMod()
 		return (
 			<div>
 				<table>

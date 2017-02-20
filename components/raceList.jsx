@@ -17,22 +17,23 @@ export default class RaceList extends React.Component {
 		var list = this.state.raceData.racialModifierList;
 		var raceContainer = [];
 		for(var race in list){
-			raceContainer.push(list[race]);
+			raceContainer.push(list[race.racialModifierList]);
 		}
-		console.log(list) //object containing all of the race objects
+		console.log("list", list) //object containing all of the race objects
 		console.log(list.wayang.name) //'Wayang'
-		console.log(raceContainer)//array of objects that contain the data for each race
+		console.log("raceContainer", raceContainer)//array of objects that contain the data for each race
 		return(
 			<div>
 				<select onChange={this.state.raceChange}>
+					<option>Select Race</option>
 					{  
-					 	raceContainer.map(function(race){
-					 		console.log(race) //object containing the data of the particular race
-					 		console.log(race.name) //Name of race
+					 	Object.keys(list).map(function(race){
+					 		console.log("race object", list[race]) //object containing the data of the particular race
+					 		console.log("Name of race:",race) //Name of race
+					 		console.log("Name string of race:", list[race].name)
 							return(
-
-								<option key={race.name} value={race.name}>
-									{race.name}
+								<option key={list[race].name} value={list[race].name}>
+									{list[race].name}
 								</option>
 							)
 
@@ -43,3 +44,20 @@ export default class RaceList extends React.Component {
 		)
 	}
 }
+
+				// <select onChange={this.state.raceChange}>
+				// 	<option>Select Race</option>
+				// 	{  
+				// 	 	raceContainer.map(function(race){
+				// 	 		console.log(race.racialModifierList) //object containing the data of the particular race
+				// 	 		console.log(race.racialModifierList.name) //Name of race
+				// 			return(
+
+				// 				<option key={race.racialModifierList.name} value={race.racialModifierList.name}>
+				// 					{race.racialModifierList.name}
+				// 				</option>
+				// 			)
+
+				// 		})
+				// 	}
+				// </select>
