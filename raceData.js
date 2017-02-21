@@ -222,7 +222,7 @@ module.exports = {
 				wisdom: -2,
 				charisma: 2
 			},
-			pfsLegal: false,
+			pfsLegal: true,
 			coreRace: false,
 			thirdParty: false
 		},
@@ -267,7 +267,7 @@ module.exports = {
 				wisdom: 2,
 				charisma: -2
 			},
-			pfsLegal: false,
+			pfsLegal: true,
 			coreRace: false,
 			thirdParty: false
 		},
@@ -297,7 +297,7 @@ module.exports = {
 				wisdom: 0,
 				charisma: 0
 			},
-			pfsLegal: false,
+			pfsLegal: true,
 			coreRace: false,
 			thirdParty: false
 		},
@@ -342,7 +342,7 @@ module.exports = {
 				wisdom: 2,
 				charisma: 0
 			},
-			pfsLegal: false,
+			pfsLegal: true,
 			coreRace: false,
 			thirdParty: false
 		},
